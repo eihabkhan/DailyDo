@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0928D0AB2294AFC0003968C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0AA2294AFC0003968C6 /* AppDelegate.swift */; };
-		0928D0AD2294AFC0003968C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0AC2294AFC0003968C6 /* ViewController.swift */; };
 		0928D0B02294AFC0003968C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0928D0AE2294AFC0003968C6 /* Main.storyboard */; };
 		0928D0B32294AFC0003968C6 /* DailyDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0B12294AFC0003968C6 /* DailyDo.xcdatamodeld */; };
 		0928D0B52294AFC1003968C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0928D0B42294AFC1003968C6 /* Assets.xcassets */; };
 		0928D0B82294AFC1003968C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0928D0B62294AFC1003968C6 /* LaunchScreen.storyboard */; };
 		0928D0C32294AFC1003968C6 /* DailyDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0C22294AFC1003968C6 /* DailyDoTests.swift */; };
 		0928D0CE2294AFC1003968C6 /* DailyDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0CD2294AFC1003968C6 /* DailyDoUITests.swift */; };
+		0928D0E12294B225003968C6 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E02294B225003968C6 /* TaskTableViewCell.swift */; };
+		0928D0E32294B24D003968C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E22294B24D003968C6 /* Constants.swift */; };
+		0928D0E62294B2DE003968C6 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E42294B2DE003968C6 /* Task+CoreDataClass.swift */; };
+		0928D0E72294B2DE003968C6 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E52294B2DE003968C6 /* Task+CoreDataProperties.swift */; };
+		0928D0EB2294B4C1003968C6 /* TaskEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0EA2294B4C1003968C6 /* TaskEditorViewController.swift */; };
+		0928D0ED2294B540003968C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0EC2294B540003968C6 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,6 @@
 /* Begin PBXFileReference section */
 		0928D0A72294AFC0003968C6 /* DailyDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0928D0AA2294AFC0003968C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0928D0AC2294AFC0003968C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0928D0AF2294AFC0003968C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0928D0B22294AFC0003968C6 /* DailyDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDo.xcdatamodel; sourceTree = "<group>"; };
 		0928D0B42294AFC1003968C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		0928D0C92294AFC1003968C6 /* DailyDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0928D0CD2294AFC1003968C6 /* DailyDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoUITests.swift; sourceTree = "<group>"; };
 		0928D0CF2294AFC1003968C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0928D0E02294B225003968C6 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		0928D0E22294B24D003968C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0928D0E42294B2DE003968C6 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0928D0E52294B2DE003968C6 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0928D0EA2294B4C1003968C6 /* TaskEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorViewController.swift; sourceTree = "<group>"; };
+		0928D0EC2294B540003968C6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +89,6 @@
 		0928D09E2294AFC0003968C6 = {
 			isa = PBXGroup;
 			children = (
-				0928D0DF2294B051003968C6 /* Supporting Files */,
 				0928D0A92294AFC0003968C6 /* DailyDo */,
 				0928D0C12294AFC1003968C6 /* DailyDoTests */,
 				0928D0CC2294AFC1003968C6 /* DailyDoUITests */,
@@ -100,6 +109,7 @@
 		0928D0A92294AFC0003968C6 /* DailyDo */ = {
 			isa = PBXGroup;
 			children = (
+				0928D0DF2294B051003968C6 /* Supporting Files */,
 				0928D0DE2294B041003968C6 /* Utilities */,
 				0928D0DD2294B03E003968C6 /* Model */,
 				0928D0DC2294B03C003968C6 /* View */,
@@ -131,7 +141,8 @@
 		0928D0DB2294B038003968C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0928D0AC2294AFC0003968C6 /* ViewController.swift */,
+				0928D0EC2294B540003968C6 /* ViewController.swift */,
+				0928D0EA2294B4C1003968C6 /* TaskEditorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 		0928D0DC2294B03C003968C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0928D0E02294B225003968C6 /* TaskTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +158,8 @@
 		0928D0DD2294B03E003968C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0928D0E42294B2DE003968C6 /* Task+CoreDataClass.swift */,
+				0928D0E52294B2DE003968C6 /* Task+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,10 +167,7 @@
 		0928D0DE2294B041003968C6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				0928D0AE2294AFC0003968C6 /* Main.storyboard */,
-				0928D0B42294AFC1003968C6 /* Assets.xcassets */,
-				0928D0B62294AFC1003968C6 /* LaunchScreen.storyboard */,
-				0928D0B12294AFC0003968C6 /* DailyDo.xcdatamodeld */,
+				0928D0E22294B24D003968C6 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -164,6 +175,10 @@
 		0928D0DF2294B051003968C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0928D0AE2294AFC0003968C6 /* Main.storyboard */,
+				0928D0B42294AFC1003968C6 /* Assets.xcassets */,
+				0928D0B62294AFC1003968C6 /* LaunchScreen.storyboard */,
+				0928D0B12294AFC0003968C6 /* DailyDo.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -299,8 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0928D0E32294B24D003968C6 /* Constants.swift in Sources */,
+				0928D0E12294B225003968C6 /* TaskTableViewCell.swift in Sources */,
+				0928D0EB2294B4C1003968C6 /* TaskEditorViewController.swift in Sources */,
+				0928D0ED2294B540003968C6 /* ViewController.swift in Sources */,
 				0928D0B32294AFC0003968C6 /* DailyDo.xcdatamodeld in Sources */,
-				0928D0AD2294AFC0003968C6 /* ViewController.swift in Sources */,
+				0928D0E72294B2DE003968C6 /* Task+CoreDataProperties.swift in Sources */,
+				0928D0E62294B2DE003968C6 /* Task+CoreDataClass.swift in Sources */,
 				0928D0AB2294AFC0003968C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
