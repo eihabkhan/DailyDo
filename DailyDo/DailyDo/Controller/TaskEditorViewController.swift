@@ -16,7 +16,7 @@ class TaskEditorViewController: UIViewController {
     
     var selectedPriority = 4
     var isInEditingMode = false
-    let addButton = UIBarButtonItem(image: UIImage(named: "send"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(doneClicked))
+    let addButton = UIBarButtonItem(image: UIImage(named: "send"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(addTaskTapped(_:)))
     private var appDelegate = AppDelegate.getAppDelegate()
     private var context = AppDelegate.getAppDelegate().persistentContainer.viewContext
     var task: Task? {
@@ -33,8 +33,10 @@ class TaskEditorViewController: UIViewController {
         titleField.becomeFirstResponder()
         titleField.delegate = self
         attachKeyboardAction()
-        
+        checkForExistingTask()
     }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -48,6 +50,51 @@ class TaskEditorViewController: UIViewController {
             addButton.isEnabled = !title.isEmpty
             addTaskButton.isEnabled = !title.isEmpty
         }
+    }
+    
+    
+    func checkForExistingTask() {
+        if isInEditingMode {
+            guard let task = task  else { return }
+            
+            titleField.text = task.title
+            let priority = TaskPriority(rawValue: task.priority)!
+            
+            switch priority {
+            case .p1:
+                selectedPriority = 1
+            case .p2:
+                selectedPriority = 2
+            case .p3:
+                selectedPriority = 3
+            default:
+                selectedPriority = 4
+            }
+            
+            setPriority(forButton: priorityButtons[selectedPriority - 1])
+            addTaskButton.setTitle("Update Task", for: .normal)
+            
+        }
+        
+    }
+    
+    func update(task: Task) {
+        let request = Task.createFetchRequest()
+        let predicate = NSPredicate(format: "uuid == %@", task.uuid)
+        request.predicate = predicate
+        
+        do {
+            if let taskToUpdate = try context.fetch(request).first {
+                print(taskToUpdate)
+                taskToUpdate.setValue(task.title, forKey: "title")
+                taskToUpdate.setValue(task.priority, forKey: "priority")
+                try context.save()
+            }
+            
+        } catch {
+            print("Error updating task, \(error.localizedDescription)")
+        }
+        
     }
     
     func attachKeyboardAction() {
@@ -88,6 +135,26 @@ class TaskEditorViewController: UIViewController {
     }
     
     @IBAction func addTaskTapped(_ sender: UIButton) {
+        guard let title = titleField.text else { return }
+        
+        if isInEditingMode {
+            
+            let updatedTask = task!
+            updatedTask.title = title
+            updatedTask.priority = "p\(selectedPriority)"
+            
+            update(task: updatedTask)
+            
+            
+        } else {
+            let task = Task(context: context)
+            task.title = title
+            task.priority = "p\(selectedPriority)"
+            task.uuid = UUID().uuidString
+            appDelegate.saveContext()
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func priorityTapped(_ sender: UIButton) {
