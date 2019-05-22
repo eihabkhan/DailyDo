@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TaskEditorViewController: UIViewController {
     
@@ -39,8 +40,6 @@ class TaskEditorViewController: UIViewController {
         attachKeyboardAction()
         checkForExistingTask()
     }
-    
-    
     
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -153,7 +152,7 @@ class TaskEditorViewController: UIViewController {
             let updatedTask = task!
             updatedTask.title = title
             updatedTask.priority = "p\(selectedPriority)"
-            
+            DataService.shared.create(task: updatedTask)
             update(task: updatedTask)
             
             
@@ -162,8 +161,10 @@ class TaskEditorViewController: UIViewController {
             task.title = title
             task.priority = "p\(selectedPriority)"
             task.uuid = UUID().uuidString
-            appDelegate.saveContext()
+            DataService.shared.create(task: task)
+//            appDelegate.saveContext()
         }
+        
         
         dismiss(animated: true, completion: nil)
     }

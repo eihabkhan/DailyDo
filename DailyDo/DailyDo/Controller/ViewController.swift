@@ -15,11 +15,11 @@ class ViewController: UITableViewController {
     var tasks = [Task]()
     let appDelegate = AppDelegate.getAppDelegate()
     let context = AppDelegate.getAppDelegate().persistentContainer.viewContext
-    var filterAction: UIBarButtonItem!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     
@@ -33,16 +33,12 @@ class ViewController: UITableViewController {
     func setupNavItems() {
         let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTask))
         let profileItem = UIBarButtonItem(image: UIImage(named: "profile")!, landscapeImagePhone: UIImage(named: "profile")!, style: .plain, target: self, action: #selector(profileTapped))
-        
-        filterAction = UIBarButtonItem(title: "Filter: Current", style: .plain, target: self, action: #selector(filterTapped))
-        
+
         if Auth.auth().currentUser == nil {
             navigationItem.rightBarButtonItem = addItem
         } else {
             navigationItem.rightBarButtonItems = [addItem, profileItem]
         }
-        
-        navigationItem.leftBarButtonItem = filterAction
         
     }
 
@@ -62,36 +58,19 @@ class ViewController: UITableViewController {
         }
     }
     
-    @objc func filterTapped() {
-        let ac = UIAlertController(title: "Filter Tasks", message: "Choose how you want to view your tasks", preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: "Show Current Tasks", style: .default, handler: { [weak self] (_) in
-            self?.filterAction.title = "Filter: Current"
-            self?.loadTasks()
-        }))
-        ac.addAction(UIAlertAction(title: "Show Completed Tasks", style: .default, handler: { [weak self] (_) in
-            self?.filterAction.title = "Filter: Completed"
-            self?.loadTasks(completed: true)
-        }))
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(ac, animated: true)
-    }
     
     func loadTasks(completed: Bool = false) {
-        
-        let request = Task.createFetchRequest()
-        let sort = NSSortDescriptor(key: "priority", ascending: true)
-        let predicate = NSPredicate(format: "isComplete == %@", NSNumber(value: completed))
-        print(completed)
-        request.predicate = predicate
-        request.sortDescriptors = [sort]
-        
-        do {
-            tasks = try context.fetch(request)
-            print("Received \(tasks.count) tasks")
-            tableView.reloadData()
-        } catch {
-            print("ERROR: \(error.localizedDescription)")
+        spinner.startAnimating()
+        DataService.shared.readTasks {[weak self] (tasks) in
+            self?.tasks = tasks.filter { !$0.isComplete }
+            self?.spinner.stopAnimating()
+            self?.tableView.reloadData()
         }
+        
+//        if let fetchedTasks = PersistanceService.shared.fetchTasks() {
+//            tasks = fetchedTasks
+//            tableView.reloadData()
+//        }
     }
     
     
@@ -107,37 +86,23 @@ class ViewController: UITableViewController {
     
     @objc func promptForDeletion(task: Task, at indexPath: IndexPath) {
         let ac = UIAlertController(title: "Delete Task?", message: "Are you sure you want to delete this task", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: {[weak self] (_) in
-            self?.delete(task: task, at: indexPath)
-            
+        ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] (_) in
+            self?.delete(task: task)
         }))
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(ac, animated: true)
     }
     
-    func delete(task: Task, at indexPath: IndexPath) {
-        appDelegate.persistentContainer.viewContext.delete(task)
-        tasks.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-        appDelegate.saveContext()
+    func delete(task: Task) {
+        DataService.shared.delete(task: task)
+        loadTasks()
     }
     
     func complete(task: Task) {
-        let request = Task.createFetchRequest()
-        let predicate = NSPredicate(format: "uuid == %@", task.uuid)
-        request.predicate = predicate
-    
-        do {
-            if let taskToComplete = try context.fetch(request).first {
-                print(taskToComplete)
-                taskToComplete.setValue(true, forKey: "isComplete")
-                try context.save()
-                loadTasks()
-            }
-            
-        } catch {
-            print("Error updating task, \(error.localizedDescription)")
-        }
+        DataService.shared.REF_TASKS.child(Auth.auth().currentUser!.uid).child(task.uuid).updateChildValues([
+            "isComplete": true
+            ])
+        loadTasks()
     }
     
     // MARK: TableView - Delegate
@@ -155,7 +120,7 @@ class ViewController: UITableViewController {
         let edit = UITableViewRowAction(style: .normal, title: "Edit") {[weak self] (action, indexPath) in
             if let editTaskVC = self?.storyboard?.instantiateViewController(withIdentifier: "TaskEditor") as? TaskEditorViewController {
                 if let task = self?.tasks[indexPath.row] {
-                    print("Selected Task: \(task.title)")
+
                     editTaskVC.task = task
                     self?.present(editTaskVC, animated: true)
                 }
@@ -181,7 +146,6 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath) as? TaskTableViewCell else { return TaskTableViewCell() }
-        print(tasks[indexPath.row].uuid)
         cell.configure(withTask: tasks[indexPath.row])
         return cell
     }

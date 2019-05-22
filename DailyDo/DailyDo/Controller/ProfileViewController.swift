@@ -43,7 +43,12 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func showHistoryTapped(_ sender: UIButton) {
-        
+        if let historyVC = storyboard?.instantiateViewController(withIdentifier: "History") as? HistoryViewController {
+            if let completedTasks = PersistanceService.shared.fetchTasks(completed: true) {
+                historyVC.completedTasks = completedTasks
+                navigationController?.pushViewController(historyVC, animated: true)
+            }
+        }
     }
     
 

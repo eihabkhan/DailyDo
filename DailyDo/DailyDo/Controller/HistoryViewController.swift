@@ -23,6 +23,12 @@ class HistoryViewController: UITableViewController {
         return completedTasks.count
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath) as? TaskTableViewCell else { return TaskTableViewCell() }
+        cell.configure(withTask: completedTasks[indexPath.row])
+        return cell
+    }
+    
     // MARK: TableView - Delegate
-
+    
 }

@@ -60,6 +60,9 @@ class LoginViewController: UIViewController {
                     } else {
                         if result?.user != nil {
                             self?.spinner.stopAnimating()
+                            let mainVC = self?.storyboard?.instantiateViewController(withIdentifier: "Todo List") as? UITableViewController
+                            mainVC?.tableView.reloadData()
+                            AuthService.shared.updateUID(uid: result!.user.uid)
                             self?.dismiss(animated: true, completion: nil)
                         }
                     }

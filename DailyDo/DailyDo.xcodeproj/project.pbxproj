@@ -26,6 +26,9 @@
 		097E89BB2295961800485D81 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89BA2295961800485D81 /* SignupViewController.swift */; };
 		097E89BD2295B72500485D81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89BC2295B72500485D81 /* ProfileViewController.swift */; };
 		097E89BF2295DF6200485D81 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89BE2295DF6200485D81 /* HistoryViewController.swift */; };
+		097E89C12295E15900485D81 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89C02295E15900485D81 /* PersistanceService.swift */; };
+		097E89C32295EDA800485D81 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89C22295EDA800485D81 /* AuthService.swift */; };
+		097E89C62295F77D00485D81 /* BoolExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89C52295F77D00485D81 /* BoolExt.swift */; };
 		1B7D4815C9CD10D901FC0D5A /* Pods_DailyDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552ABD0EC4EBEF8394F20958 /* Pods_DailyDo.framework */; };
 		8EFCA1D0A00BA8599400FE90 /* Pods_DailyDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB9B83E0458E2F86808A1E4 /* Pods_DailyDoUITests.framework */; };
 		919CEDB41FDCD2A9E11C88C1 /* Pods_DailyDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDBFCB59330FD1583102812 /* Pods_DailyDoTests.framework */; };
@@ -74,6 +77,9 @@
 		097E89BA2295961800485D81 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		097E89BC2295B72500485D81 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		097E89BE2295DF6200485D81 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		097E89C02295E15900485D81 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		097E89C22295EDA800485D81 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		097E89C52295F77D00485D81 /* BoolExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExt.swift; sourceTree = "<group>"; };
 		0CDBFCB59330FD1583102812 /* Pods_DailyDoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D87C8158F1F4B0FDDE86474 /* Pods-DailyDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDoTests/Pods-DailyDoTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B142ACDD0F52549DE138E58 /* Pods-DailyDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDo/Pods-DailyDo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		0928D0A92294AFC0003968C6 /* DailyDo */ = {
 			isa = PBXGroup;
 			children = (
+				097E89C42295F75600485D81 /* Extensions */,
 				097E89B52295758200485D81 /* Services */,
 				0928D0DF2294B051003968C6 /* Supporting Files */,
 				0928D0DE2294B041003968C6 /* Utilities */,
@@ -222,8 +229,18 @@
 			isa = PBXGroup;
 			children = (
 				097E89B62295758B00485D81 /* DataService.swift */,
+				097E89C02295E15900485D81 /* PersistanceService.swift */,
+				097E89C22295EDA800485D81 /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		097E89C42295F75600485D81 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				097E89C52295F77D00485D81 /* BoolExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		65A93F11F4526F4D775F7C7E /* Pods */ = {
@@ -485,14 +502,17 @@
 				097E89B72295758B00485D81 /* DataService.swift in Sources */,
 				0928D0E32294B24D003968C6 /* Constants.swift in Sources */,
 				097E89BB2295961800485D81 /* SignupViewController.swift in Sources */,
+				097E89C62295F77D00485D81 /* BoolExt.swift in Sources */,
 				0928D0E12294B225003968C6 /* TaskTableViewCell.swift in Sources */,
 				097E89BF2295DF6200485D81 /* HistoryViewController.swift in Sources */,
+				097E89C12295E15900485D81 /* PersistanceService.swift in Sources */,
 				0928D0EB2294B4C1003968C6 /* TaskEditorViewController.swift in Sources */,
 				0928D0ED2294B540003968C6 /* ViewController.swift in Sources */,
 				097E89BD2295B72500485D81 /* ProfileViewController.swift in Sources */,
 				0928D0B32294AFC0003968C6 /* DailyDo.xcdatamodeld in Sources */,
 				0928D0E72294B2DE003968C6 /* Task+CoreDataProperties.swift in Sources */,
 				0928D0E62294B2DE003968C6 /* Task+CoreDataClass.swift in Sources */,
+				097E89C32295EDA800485D81 /* AuthService.swift in Sources */,
 				097E89B92295960500485D81 /* LoginViewController.swift in Sources */,
 				0928D0AB2294AFC0003968C6 /* AppDelegate.swift in Sources */,
 			);
