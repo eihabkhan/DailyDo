@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1098446741642-b2g83cqc1fp90i0i4sl4r4f3vplb6g1k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1098446741642-b2g83cqc1fp90i0i4sl4r4f3vplb6g1k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCeesz1IFgbh0gI8qBt4osQabjHQ5K6sBE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1098446741642</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.eihab.DailyDo</string>
+	<key>PROJECT_ID</key>
+	<string>dailydo-35b32</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dailydo-35b32.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1098446741642:ios:550c896e6ed66ba4</string>
+	<key>DATABASE_URL</key>
+	<string>https://dailydo-35b32.firebaseio.com</string>
+</dict>
+</plist>

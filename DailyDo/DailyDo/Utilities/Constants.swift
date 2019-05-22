@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 
 enum TaskPriority: String {
@@ -15,3 +16,6 @@ enum TaskPriority: String {
     case p3
     case p4
 }
+
+
+let DB_BASE = Database.database().reference()

@@ -30,11 +30,16 @@ class TaskEditorViewController: UIViewController {
         addGesture()
         
         titleField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        // Keyboard observers
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         titleField.becomeFirstResponder()
         titleField.delegate = self
         attachKeyboardAction()
         checkForExistingTask()
     }
+    
     
     
     
@@ -52,6 +57,15 @@ class TaskEditorViewController: UIViewController {
         }
     }
     
+    @objc func keyboardWillAppear() {
+        titleField.inputAccessoryView?.isHidden = false
+    }
+    
+    @objc func keyboardWillDisappear() {
+        //Do something here
+        titleField.inputAccessoryView?.isHidden = true
+        print("Keyboard hidden")
+    }
     
     func checkForExistingTask() {
         if isInEditingMode {
@@ -99,7 +113,7 @@ class TaskEditorViewController: UIViewController {
     
     func attachKeyboardAction() {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneClicked))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dissmissKeyboard))
         addButton.tintColor = #colorLiteral(red: 0.8784313725, green: 0.368627451, blue: 0.3647058824, alpha: 1)
         addButton.isEnabled = false
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -108,9 +122,6 @@ class TaskEditorViewController: UIViewController {
         titleField.inputAccessoryView = toolbar
     }
     
-    @objc func doneClicked() {
-        view.endEditing(true)
-    }
     
     func setPriority(forButton sender: UIButton) {
         sender.alpha = 1
