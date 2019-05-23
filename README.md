@@ -2,7 +2,7 @@
 A simple To-Do Application for iOS
 
 
-![DailyDoLogo](https://www.dropbox.com/s/hkhry45dcfeg40j/logo-reveal.png?dl=0) 
+![DailyDoLogo](https://dl.dropboxusercontent.com/s/hkhry45dcfeg40j/logo-reveal.png?dl=0) 
 ## Introducing DailyDo
 A lightweight task manager app for iOS
 
