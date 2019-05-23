@@ -6,9 +6,13 @@ A simple To-Do Application for iOS
 ## Introducing DailyDo
 A lightweight task manager app for iOS
 
+## Platform
+- iOS
+
 ## Technologies Used
 - Firebase
 - Firebase Auth
+
 
 ## Important
 Make sure to `cd` to the project folder and run `pod install` before running the project.
