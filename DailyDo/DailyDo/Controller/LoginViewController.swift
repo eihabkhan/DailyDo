@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
                 spinner.startAnimating()
                 Auth.auth().signIn(withEmail: email, password: password) {[weak self] (result, error) in
                     if let error = error, let errorCode = AuthErrorCode(rawValue: error._code) {
-                        var errorMessage = ErrorManager.shared.handleLoginError(forCode: errorCode)
+                        let errorMessage = ErrorManager.shared.handleLoginError(forCode: errorCode)
                         self?.spinner.stopAnimating()
                         self?.displayError(message: errorMessage)
                     } else {
