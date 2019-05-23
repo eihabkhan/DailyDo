@@ -22,6 +22,9 @@ A lightweight task manager app for iOS
 - View log of completed tasks
 - Categorize tasks using priorities (p1 to p4, highest to lowest priority respectively) 
 
+## Note:
+The app DOES NOT support offline storage... YET!
+
 ## Important
 - Make sure to `cd` to the project folder and run `pod install` before running the project.
 - Navigatie to the project folder and open `DailyDo.xcworkspace` rather than `DailyDo.xcodeproj`
