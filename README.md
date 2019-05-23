@@ -13,6 +13,14 @@ A lightweight task manager app for iOS
 - Firebase
 - Firebase Auth
 
+## Features:
+- Signup/Login user
+- Create tasks
+- Update existing tasks
+- Mark tasks as complete
+- Delete unwanted tasks
+- View log of completed tasks
+- Categorize tasks using priorities (p1 to p4, highest to lowest priority respectively) 
 
 ## Important
 - Make sure to `cd` to the project folder and run `pod install` before running the project.
