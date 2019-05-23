@@ -44,6 +44,7 @@ class ProfileViewController: UIViewController {
     @IBAction func showHistoryTapped(_ sender: UIButton) {
         if let historyVC = storyboard?.instantiateViewController(withIdentifier: "History") as? HistoryViewController {
             DataService.shared.readTasks {[weak self] (tasks) in
+                guard let tasks = tasks else { return }
                 historyVC.completedTasks = tasks.filter { $0.isComplete }
                 self?.navigationController?.pushViewController(historyVC, animated: true)
             }

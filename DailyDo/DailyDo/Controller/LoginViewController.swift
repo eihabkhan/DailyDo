@@ -41,20 +41,7 @@ class LoginViewController: UIViewController {
                 spinner.startAnimating()
                 Auth.auth().signIn(withEmail: email, password: password) {[weak self] (result, error) in
                     if let error = error, let errorCode = AuthErrorCode(rawValue: error._code) {
-                        var errorMessage: String
-                        switch errorCode {
-                        case .invalidEmail:
-                            debugPrint("Email Invalid, try again")
-                            errorMessage = "Email Invalid, try again"
-                        case .wrongPassword:
-                            debugPrint("Email Address or Password is incorrect.")
-                            errorMessage = "Email Address or Password is incorrect."
-                        case .networkError:
-                            errorMessage = "Lost connection, please try again"
-                        default:
-                            debugPrint("Unknown error. Please try again, \(error.localizedDescription)")
-                            errorMessage = "Unknown error. Please try again"
-                        }
+                        var errorMessage = ErrorManager.shared.handleLoginError(forCode: errorCode)
                         self?.spinner.stopAnimating()
                         self?.displayError(message: errorMessage)
                     } else {

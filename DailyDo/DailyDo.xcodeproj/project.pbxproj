@@ -23,6 +23,7 @@
 		09583F4A229628290052C277 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F49229628290052C277 /* LoginViewControllerTest.swift */; };
 		09583F4D2296308A0052C277 /* SignupViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F4C2296308A0052C277 /* SignupViewControllerTest.swift */; };
 		09583F4F2296310B0052C277 /* HistoryViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F4E2296310B0052C277 /* HistoryViewControllerTest.swift */; };
+		09583F51229635210052C277 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F50229635210052C277 /* ErrorManager.swift */; };
 		097E89B42295750000485D81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 097E89B32295750000485D81 /* GoogleService-Info.plist */; };
 		097E89B72295758B00485D81 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89B62295758B00485D81 /* DataService.swift */; };
 		097E89B92295960500485D81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89B82295960500485D81 /* LoginViewController.swift */; };
@@ -66,6 +67,7 @@
 		09583F49229628290052C277 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		09583F4C2296308A0052C277 /* SignupViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewControllerTest.swift; sourceTree = "<group>"; };
 		09583F4E2296310B0052C277 /* HistoryViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewControllerTest.swift; sourceTree = "<group>"; };
+		09583F50229635210052C277 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		097E89B32295750000485D81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		097E89B62295758B00485D81 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		097E89B82295960500485D81 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		0928D0DE2294B041003968C6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				09583F50229635210052C277 /* ErrorManager.swift */,
 				0928D0E22294B24D003968C6 /* Constants.swift */,
 			);
 			path = Utilities;
@@ -435,6 +438,7 @@
 				0928D0EB2294B4C1003968C6 /* TaskEditorViewController.swift in Sources */,
 				0928D0ED2294B540003968C6 /* ViewController.swift in Sources */,
 				097E89BD2295B72500485D81 /* ProfileViewController.swift in Sources */,
+				09583F51229635210052C277 /* ErrorManager.swift in Sources */,
 				0928D0B32294AFC0003968C6 /* DailyDo.xcdatamodeld in Sources */,
 				097E89C32295EDA800485D81 /* AuthService.swift in Sources */,
 				097E89B92295960500485D81 /* LoginViewController.swift in Sources */,

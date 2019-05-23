@@ -11,9 +11,10 @@ import Firebase
 
 class TaskEditorViewController: UIViewController {
     
-    @IBOutlet weak var titleField: UITextField!
-    @IBOutlet var priorityButtons: [UIButton]!
-    @IBOutlet weak var addTaskButton: UIButton!
+    // MARK: Properties
+    @IBOutlet private weak var titleField: UITextField!
+    @IBOutlet private var priorityButtons: [UIButton]!
+    @IBOutlet private weak var addTaskButton: UIButton!
     
     var selectedPriority = 4
     var isInEditingMode = false
@@ -151,7 +152,7 @@ class TaskEditorViewController: UIViewController {
 
 }
 
-
+// MARK: Extensions
 extension TaskEditorViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

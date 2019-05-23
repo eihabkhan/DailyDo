@@ -35,11 +35,14 @@ class DataService {
         REF_TASKS.child(uid).child(task.uuid).removeValue()
     }
     
-    func readTasks(completion: @escaping ([Task]) -> ()) {
+    func readTasks(completion: @escaping ([Task]?) -> ()) {
         var tasks = [Task]()
         guard let uid = AuthService.shared.currentUserUID else { return }
         REF_TASKS.child(uid).queryOrdered(byChild: "priority").observeSingleEvent(of: .value) { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                if snapshot.isEmpty {
+                    return completion(nil)                    
+                }
                 for snap in snapshot {
                     let data = snap.value as! [String: Any]
                     
@@ -51,10 +54,11 @@ class DataService {
                     tasks.append(task)
                 }
 
-                completion(tasks)
-
+                return completion(tasks)
+                
             }
         }
+        return completion(nil)
     }
     
     

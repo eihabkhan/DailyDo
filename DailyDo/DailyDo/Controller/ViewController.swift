@@ -14,12 +14,10 @@ class ViewController: UITableViewController {
 
     // MARK: Properties
     var tasks = [Task]()
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet private weak var spinner: UIActivityIndicatorView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,11 +26,15 @@ class ViewController: UITableViewController {
         setupNavItems()
         loadTasks()
     }
+
+    
+    // MARK: Internal
+    
     
     func setupNavItems() {
         let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTask))
         let profileItem = UIBarButtonItem(image: UIImage(named: "profile")!, landscapeImagePhone: UIImage(named: "profile")!, style: .plain, target: self, action: #selector(profileTapped))
-
+        
         if Auth.auth().currentUser == nil {
             navigationItem.rightBarButtonItem = addItem
         } else {
@@ -40,30 +42,17 @@ class ViewController: UITableViewController {
         }
         
     }
-
-    
-    // MARK: Internal
-    
-    @objc func profileTapped() {
-        if let profileVC = storyboard?.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController {
-            profileVC.user = Auth.auth().currentUser
-            navigationController?.pushViewController(profileVC, animated: true)
-        }
-    }
-    
-    @objc func addNewTask() {
-        if let taskEditorViewController = storyboard?.instantiateViewController(withIdentifier: "TaskEditor") as? TaskEditorViewController {
-            present(taskEditorViewController, animated: true)
-        }
-    }
-    
     
     func loadTasks(completed: Bool = false) {
         spinner.startAnimating()
         DataService.shared.readTasks {[weak self] (tasks) in
-            self?.tasks = tasks.filter { !$0.isComplete }
+            if let tasks = tasks {
+                
+                self?.tasks = tasks.filter { !$0.isComplete }
+                self?.spinner.stopAnimating()
+                self?.tableView.reloadData()
+            }
             self?.spinner.stopAnimating()
-            self?.tableView.reloadData()
         }
     }
     
@@ -74,18 +63,6 @@ class ViewController: UITableViewController {
                 present(loginVC, animated: true)
             }
         }
-    }
-    
-    
-    
-    @objc func promptForDeletion(at indexPath: IndexPath) {
-        let task = tasks[indexPath.row]
-        let ac = UIAlertController(title: "Delete Task?", message: "Are you sure you want to delete this task", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] (_) in
-            self?.delete(task: task)
-        }))
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(ac, animated: true)
     }
     
     func delete(task: Task) {
@@ -100,11 +77,31 @@ class ViewController: UITableViewController {
         loadTasks()
     }
     
-    // MARK: TableView - Delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    @objc func profileTapped() {
+        if let profileVC = storyboard?.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController {
+            profileVC.user = Auth.auth().currentUser
+            navigationController?.pushViewController(profileVC, animated: true)
+        }
     }
     
+    @objc func addNewTask() {
+        if let taskEditorViewController = storyboard?.instantiateViewController(withIdentifier: "TaskEditor") as? TaskEditorViewController {
+            present(taskEditorViewController, animated: true)
+        }
+    }
+    
+    @objc func promptForDeletion(at indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        let ac = UIAlertController(title: "Delete Task?", message: "Are you sure you want to delete this task", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] (_) in
+            self?.delete(task: task)
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(ac, animated: true)
+    }
+    
+    
+    // MARK: TableView - Delegate
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") {[weak self] (_, indexPath) in
