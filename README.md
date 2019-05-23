@@ -15,7 +15,8 @@ A lightweight task manager app for iOS
 
 
 ## Important
-Make sure to `cd` to the project folder and run `pod install` before running the project.
+- Make sure to `cd` to the project folder and run `pod install` before running the project.
+- Navigatie to the project folder and open `DailyDo.xcworkspace` rather than `DailyDo.xcodeproj`
 
 ## Cool things I've learnt while building this project
 - TextField input accessory views
