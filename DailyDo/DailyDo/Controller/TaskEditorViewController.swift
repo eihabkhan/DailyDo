@@ -18,8 +18,7 @@ class TaskEditorViewController: UIViewController {
     var selectedPriority = 4
     var isInEditingMode = false
     let addButton = UIBarButtonItem(image: UIImage(named: "send"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(addTaskTapped(_:)))
-    private var appDelegate = AppDelegate.getAppDelegate()
-    private var context = AppDelegate.getAppDelegate().persistentContainer.viewContext
+
     var task: Task? {
         didSet {
             isInEditingMode = !(task == nil)
@@ -91,24 +90,6 @@ class TaskEditorViewController: UIViewController {
         
     }
     
-    func update(task: Task) {
-        let request = Task.createFetchRequest()
-        let predicate = NSPredicate(format: "uuid == %@", task.uuid)
-        request.predicate = predicate
-        
-        do {
-            if let taskToUpdate = try context.fetch(request).first {
-                print(taskToUpdate)
-                taskToUpdate.setValue(task.title, forKey: "title")
-                taskToUpdate.setValue(task.priority, forKey: "priority")
-                try context.save()
-            }
-            
-        } catch {
-            print("Error updating task, \(error.localizedDescription)")
-        }
-        
-    }
     
     func attachKeyboardAction() {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
@@ -153,16 +134,11 @@ class TaskEditorViewController: UIViewController {
             updatedTask.title = title
             updatedTask.priority = "p\(selectedPriority)"
             DataService.shared.create(task: updatedTask)
-            update(task: updatedTask)
-            
             
         } else {
-            let task = Task(context: context)
-            task.title = title
-            task.priority = "p\(selectedPriority)"
-            task.uuid = UUID().uuidString
+            let task = Task(title: title, priority: "p\(selectedPriority)", uuid: UUID().uuidString)
             DataService.shared.create(task: task)
-//            appDelegate.saveContext()
+
         }
         
         

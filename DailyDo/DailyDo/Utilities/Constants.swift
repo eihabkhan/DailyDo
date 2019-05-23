@@ -17,5 +17,4 @@ enum TaskPriority: String {
     case p4
 }
 
-
 let DB_BASE = Database.database().reference()

@@ -42,11 +42,12 @@ class DataService {
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     let data = snap.value as! [String: Any]
-                    let task = Task(context: AppDelegate.getAppDelegate().persistentContainer.viewContext)
-                    task.isComplete = Bool(number: data["isComplete"] as! Int)
-                    task.uuid = snap.key
-                    task.title = data["title"] as! String
-                    task.priority = data["priority"] as! String
+                    
+                    let isComplete = Bool(number: data["isComplete"] as! Int)
+                    let uuid = snap.key
+                    let title = data["title"] as! String
+                    let priority = data["priority"] as! String
+                    let task = Task(title: title, isComplete: isComplete, priority: priority, uuid: uuid)
                     tasks.append(task)
                 }
 

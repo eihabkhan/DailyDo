@@ -13,7 +13,6 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    private var appDelegate = AppDelegate.getAppDelegate()
     
     var user: User?
     var username: String?
@@ -44,10 +43,13 @@ class ProfileViewController: UIViewController {
     
     @IBAction func showHistoryTapped(_ sender: UIButton) {
         if let historyVC = storyboard?.instantiateViewController(withIdentifier: "History") as? HistoryViewController {
-            if let completedTasks = PersistanceService.shared.fetchTasks(completed: true) {
-                historyVC.completedTasks = completedTasks
-                navigationController?.pushViewController(historyVC, animated: true)
+            DataService.shared.readTasks {[weak self] (tasks) in
+                historyVC.completedTasks = tasks.filter { $0.isComplete }
+                self?.navigationController?.pushViewController(historyVC, animated: true)
             }
+            
+            
+            
         }
     }
     

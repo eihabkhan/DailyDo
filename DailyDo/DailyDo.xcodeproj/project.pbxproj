@@ -12,37 +12,31 @@
 		0928D0B32294AFC0003968C6 /* DailyDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0B12294AFC0003968C6 /* DailyDo.xcdatamodeld */; };
 		0928D0B52294AFC1003968C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0928D0B42294AFC1003968C6 /* Assets.xcassets */; };
 		0928D0B82294AFC1003968C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0928D0B62294AFC1003968C6 /* LaunchScreen.storyboard */; };
-		0928D0C32294AFC1003968C6 /* DailyDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0C22294AFC1003968C6 /* DailyDoTests.swift */; };
-		0928D0CE2294AFC1003968C6 /* DailyDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0CD2294AFC1003968C6 /* DailyDoUITests.swift */; };
 		0928D0E12294B225003968C6 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E02294B225003968C6 /* TaskTableViewCell.swift */; };
 		0928D0E32294B24D003968C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E22294B24D003968C6 /* Constants.swift */; };
-		0928D0E62294B2DE003968C6 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E42294B2DE003968C6 /* Task+CoreDataClass.swift */; };
-		0928D0E72294B2DE003968C6 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0E52294B2DE003968C6 /* Task+CoreDataProperties.swift */; };
 		0928D0EB2294B4C1003968C6 /* TaskEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0EA2294B4C1003968C6 /* TaskEditorViewController.swift */; };
 		0928D0ED2294B540003968C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928D0EC2294B540003968C6 /* ViewController.swift */; };
+		09583F4122961BB80052C277 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F4022961BB80052C277 /* TaskTests.swift */; };
+		09583F4322961C7C0052C277 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F4222961C7C0052C277 /* Task.swift */; };
+		09583F45229620620052C277 /* DataServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F44229620620052C277 /* DataServiceTest.swift */; };
+		09583F48229622BD0052C277 /* TaskEditorViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F47229622BD0052C277 /* TaskEditorViewControllerTest.swift */; };
+		09583F4A229628290052C277 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F49229628290052C277 /* LoginViewControllerTest.swift */; };
+		09583F4D2296308A0052C277 /* SignupViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F4C2296308A0052C277 /* SignupViewControllerTest.swift */; };
+		09583F4F2296310B0052C277 /* HistoryViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09583F4E2296310B0052C277 /* HistoryViewControllerTest.swift */; };
 		097E89B42295750000485D81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 097E89B32295750000485D81 /* GoogleService-Info.plist */; };
 		097E89B72295758B00485D81 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89B62295758B00485D81 /* DataService.swift */; };
 		097E89B92295960500485D81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89B82295960500485D81 /* LoginViewController.swift */; };
 		097E89BB2295961800485D81 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89BA2295961800485D81 /* SignupViewController.swift */; };
 		097E89BD2295B72500485D81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89BC2295B72500485D81 /* ProfileViewController.swift */; };
 		097E89BF2295DF6200485D81 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89BE2295DF6200485D81 /* HistoryViewController.swift */; };
-		097E89C12295E15900485D81 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89C02295E15900485D81 /* PersistanceService.swift */; };
 		097E89C32295EDA800485D81 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89C22295EDA800485D81 /* AuthService.swift */; };
 		097E89C62295F77D00485D81 /* BoolExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E89C52295F77D00485D81 /* BoolExt.swift */; };
-		1B7D4815C9CD10D901FC0D5A /* Pods_DailyDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552ABD0EC4EBEF8394F20958 /* Pods_DailyDo.framework */; };
-		8EFCA1D0A00BA8599400FE90 /* Pods_DailyDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB9B83E0458E2F86808A1E4 /* Pods_DailyDoUITests.framework */; };
-		919CEDB41FDCD2A9E11C88C1 /* Pods_DailyDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDBFCB59330FD1583102812 /* Pods_DailyDoTests.framework */; };
+		0B0981B4CC098389DCD8ADB7 /* Pods_DailyDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D37DB41DE82E33990E5840 /* Pods_DailyDoTests.framework */; };
+		9832B34C14C45BF926BB57CC /* Pods_DailyDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6871E705698B5386546E6863 /* Pods_DailyDo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0928D0BF2294AFC1003968C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0928D09F2294AFC0003968C6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0928D0A62294AFC0003968C6;
-			remoteInfo = DailyDo;
-		};
-		0928D0CA2294AFC1003968C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0928D09F2294AFC0003968C6 /* Project object */;
 			proxyType = 1;
@@ -60,35 +54,32 @@
 		0928D0B72294AFC1003968C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0928D0B92294AFC1003968C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0928D0BE2294AFC1003968C6 /* DailyDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0928D0C22294AFC1003968C6 /* DailyDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoTests.swift; sourceTree = "<group>"; };
 		0928D0C42294AFC1003968C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0928D0C92294AFC1003968C6 /* DailyDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0928D0CD2294AFC1003968C6 /* DailyDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoUITests.swift; sourceTree = "<group>"; };
-		0928D0CF2294AFC1003968C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0928D0E02294B225003968C6 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		0928D0E22294B24D003968C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0928D0E42294B2DE003968C6 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0928D0E52294B2DE003968C6 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0928D0EA2294B4C1003968C6 /* TaskEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorViewController.swift; sourceTree = "<group>"; };
 		0928D0EC2294B540003968C6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09583F4022961BB80052C277 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
+		09583F4222961C7C0052C277 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		09583F44229620620052C277 /* DataServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTest.swift; sourceTree = "<group>"; };
+		09583F47229622BD0052C277 /* TaskEditorViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorViewControllerTest.swift; sourceTree = "<group>"; };
+		09583F49229628290052C277 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		09583F4C2296308A0052C277 /* SignupViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewControllerTest.swift; sourceTree = "<group>"; };
+		09583F4E2296310B0052C277 /* HistoryViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewControllerTest.swift; sourceTree = "<group>"; };
 		097E89B32295750000485D81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		097E89B62295758B00485D81 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		097E89B82295960500485D81 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		097E89BA2295961800485D81 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		097E89BC2295B72500485D81 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		097E89BE2295DF6200485D81 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		097E89C02295E15900485D81 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		097E89C22295EDA800485D81 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		097E89C52295F77D00485D81 /* BoolExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExt.swift; sourceTree = "<group>"; };
-		0CDBFCB59330FD1583102812 /* Pods_DailyDoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D87C8158F1F4B0FDDE86474 /* Pods-DailyDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDoTests/Pods-DailyDoTests.release.xcconfig"; sourceTree = "<group>"; };
-		4B142ACDD0F52549DE138E58 /* Pods-DailyDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDo/Pods-DailyDo.debug.xcconfig"; sourceTree = "<group>"; };
-		552ABD0EC4EBEF8394F20958 /* Pods_DailyDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CB9B83E0458E2F86808A1E4 /* Pods_DailyDoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6788F81621A3E2D3D821EE20 /* Pods-DailyDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDo/Pods-DailyDo.release.xcconfig"; sourceTree = "<group>"; };
-		7D46A97929905CB20E855CE0 /* Pods-DailyDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDoTests/Pods-DailyDoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D8AC822E9D10145D1ABD07F5 /* Pods-DailyDoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDoUITests/Pods-DailyDoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E207A4C2351C50D7CEA92A0B /* Pods-DailyDoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDoUITests/Pods-DailyDoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		49D37DB41DE82E33990E5840 /* Pods_DailyDoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6871E705698B5386546E6863 /* Pods_DailyDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72700DC6950EDC907BCC4A75 /* Pods-DailyDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDo/Pods-DailyDo.debug.xcconfig"; sourceTree = "<group>"; };
+		D79BD434B04BE20380D4A1D5 /* Pods-DailyDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDoTests/Pods-DailyDoTests.release.xcconfig"; sourceTree = "<group>"; };
+		DDA2B49D69314B47088736FF /* Pods-DailyDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDo/Pods-DailyDo.release.xcconfig"; sourceTree = "<group>"; };
+		FC43FC7B193D6EDCDC6B2BA9 /* Pods-DailyDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDoTests/Pods-DailyDoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B7D4815C9CD10D901FC0D5A /* Pods_DailyDo.framework in Frameworks */,
+				9832B34C14C45BF926BB57CC /* Pods_DailyDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,15 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				919CEDB41FDCD2A9E11C88C1 /* Pods_DailyDoTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0928D0C62294AFC1003968C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8EFCA1D0A00BA8599400FE90 /* Pods_DailyDoUITests.framework in Frameworks */,
+				0B0981B4CC098389DCD8ADB7 /* Pods_DailyDoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,10 +107,9 @@
 			children = (
 				0928D0A92294AFC0003968C6 /* DailyDo */,
 				0928D0C12294AFC1003968C6 /* DailyDoTests */,
-				0928D0CC2294AFC1003968C6 /* DailyDoUITests */,
 				0928D0A82294AFC0003968C6 /* Products */,
-				65A93F11F4526F4D775F7C7E /* Pods */,
-				A236804AD462AA92C1F06F6A /* Frameworks */,
+				80CAC8FE2DE7C83C0B10DA61 /* Pods */,
+				FE4141275D1DAAAE7AC579EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,7 +118,6 @@
 			children = (
 				0928D0A72294AFC0003968C6 /* DailyDo.app */,
 				0928D0BE2294AFC1003968C6 /* DailyDoTests.xctest */,
-				0928D0C92294AFC1003968C6 /* DailyDoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,19 +142,12 @@
 		0928D0C12294AFC1003968C6 /* DailyDoTests */ = {
 			isa = PBXGroup;
 			children = (
-				0928D0C22294AFC1003968C6 /* DailyDoTests.swift */,
+				09583F4B229629230052C277 /* Controller Tests */,
 				0928D0C42294AFC1003968C6 /* Info.plist */,
+				09583F4022961BB80052C277 /* TaskTests.swift */,
+				09583F44229620620052C277 /* DataServiceTest.swift */,
 			);
 			path = DailyDoTests;
-			sourceTree = "<group>";
-		};
-		0928D0CC2294AFC1003968C6 /* DailyDoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0928D0CD2294AFC1003968C6 /* DailyDoUITests.swift */,
-				0928D0CF2294AFC1003968C6 /* Info.plist */,
-			);
-			path = DailyDoUITests;
 			sourceTree = "<group>";
 		};
 		0928D0DB2294B038003968C6 /* Controller */ = {
@@ -200,8 +174,7 @@
 		0928D0DD2294B03E003968C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0928D0E42294B2DE003968C6 /* Task+CoreDataClass.swift */,
-				0928D0E52294B2DE003968C6 /* Task+CoreDataProperties.swift */,
+				09583F4222961C7C0052C277 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,11 +198,21 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		09583F4B229629230052C277 /* Controller Tests */ = {
+			isa = PBXGroup;
+			children = (
+				09583F47229622BD0052C277 /* TaskEditorViewControllerTest.swift */,
+				09583F49229628290052C277 /* LoginViewControllerTest.swift */,
+				09583F4C2296308A0052C277 /* SignupViewControllerTest.swift */,
+				09583F4E2296310B0052C277 /* HistoryViewControllerTest.swift */,
+			);
+			path = "Controller Tests";
+			sourceTree = "<group>";
+		};
 		097E89B52295758200485D81 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				097E89B62295758B00485D81 /* DataService.swift */,
-				097E89C02295E15900485D81 /* PersistanceService.swift */,
 				097E89C22295EDA800485D81 /* AuthService.swift */,
 			);
 			path = Services;
@@ -243,25 +226,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		65A93F11F4526F4D775F7C7E /* Pods */ = {
+		80CAC8FE2DE7C83C0B10DA61 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4B142ACDD0F52549DE138E58 /* Pods-DailyDo.debug.xcconfig */,
-				6788F81621A3E2D3D821EE20 /* Pods-DailyDo.release.xcconfig */,
-				7D46A97929905CB20E855CE0 /* Pods-DailyDoTests.debug.xcconfig */,
-				2D87C8158F1F4B0FDDE86474 /* Pods-DailyDoTests.release.xcconfig */,
-				D8AC822E9D10145D1ABD07F5 /* Pods-DailyDoUITests.debug.xcconfig */,
-				E207A4C2351C50D7CEA92A0B /* Pods-DailyDoUITests.release.xcconfig */,
+				72700DC6950EDC907BCC4A75 /* Pods-DailyDo.debug.xcconfig */,
+				DDA2B49D69314B47088736FF /* Pods-DailyDo.release.xcconfig */,
+				FC43FC7B193D6EDCDC6B2BA9 /* Pods-DailyDoTests.debug.xcconfig */,
+				D79BD434B04BE20380D4A1D5 /* Pods-DailyDoTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A236804AD462AA92C1F06F6A /* Frameworks */ = {
+		FE4141275D1DAAAE7AC579EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				552ABD0EC4EBEF8394F20958 /* Pods_DailyDo.framework */,
-				0CDBFCB59330FD1583102812 /* Pods_DailyDoTests.framework */,
-				5CB9B83E0458E2F86808A1E4 /* Pods_DailyDoUITests.framework */,
+				6871E705698B5386546E6863 /* Pods_DailyDo.framework */,
+				49D37DB41DE82E33990E5840 /* Pods_DailyDoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,11 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0928D0D22294AFC1003968C6 /* Build configuration list for PBXNativeTarget "DailyDo" */;
 			buildPhases = (
-				4A651D3204A1CF476E39E9BC /* [CP] Check Pods Manifest.lock */,
+				CF46110470E504C0311E4759 /* [CP] Check Pods Manifest.lock */,
 				0928D0A32294AFC0003968C6 /* Sources */,
 				0928D0A42294AFC0003968C6 /* Frameworks */,
 				0928D0A52294AFC0003968C6 /* Resources */,
-				FE01896264B7F9DD77B50861 /* [CP] Embed Pods Frameworks */,
+				CC64B91B5FB04426DDA099FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,7 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0928D0D52294AFC1003968C6 /* Build configuration list for PBXNativeTarget "DailyDoTests" */;
 			buildPhases = (
-				19660189A64EC3210AF0EB2D /* [CP] Check Pods Manifest.lock */,
+				579E7A38D241F4E5567C7B1A /* [CP] Check Pods Manifest.lock */,
 				0928D0BA2294AFC1003968C6 /* Sources */,
 				0928D0BB2294AFC1003968C6 /* Frameworks */,
 				0928D0BC2294AFC1003968C6 /* Resources */,
@@ -306,25 +286,6 @@
 			productName = DailyDoTests;
 			productReference = 0928D0BE2294AFC1003968C6 /* DailyDoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0928D0C82294AFC1003968C6 /* DailyDoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0928D0D82294AFC1003968C6 /* Build configuration list for PBXNativeTarget "DailyDoUITests" */;
-			buildPhases = (
-				273155B87C92BD0AB222EC6F /* [CP] Check Pods Manifest.lock */,
-				0928D0C52294AFC1003968C6 /* Sources */,
-				0928D0C62294AFC1003968C6 /* Frameworks */,
-				0928D0C72294AFC1003968C6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0928D0CB2294AFC1003968C6 /* PBXTargetDependency */,
-			);
-			name = DailyDoUITests;
-			productName = DailyDoUITests;
-			productReference = 0928D0C92294AFC1003968C6 /* DailyDoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -340,10 +301,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					0928D0BD2294AFC1003968C6 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 0928D0A62294AFC0003968C6;
-					};
-					0928D0C82294AFC1003968C6 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 0928D0A62294AFC0003968C6;
 					};
@@ -364,7 +321,6 @@
 			targets = (
 				0928D0A62294AFC0003968C6 /* DailyDo */,
 				0928D0BD2294AFC1003968C6 /* DailyDoTests */,
-				0928D0C82294AFC1003968C6 /* DailyDoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -388,17 +344,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0928D0C72294AFC1003968C6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19660189A64EC3210AF0EB2D /* [CP] Check Pods Manifest.lock */ = {
+		579E7A38D241F4E5567C7B1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,51 +369,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		273155B87C92BD0AB222EC6F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DailyDoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4A651D3204A1CF476E39E9BC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DailyDo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE01896264B7F9DD77B50861 /* [CP] Embed Pods Frameworks */ = {
+		CC64B91B5FB04426DDA099FA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -492,6 +397,28 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyDo/Pods-DailyDo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CF46110470E504C0311E4759 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -505,15 +432,13 @@
 				097E89C62295F77D00485D81 /* BoolExt.swift in Sources */,
 				0928D0E12294B225003968C6 /* TaskTableViewCell.swift in Sources */,
 				097E89BF2295DF6200485D81 /* HistoryViewController.swift in Sources */,
-				097E89C12295E15900485D81 /* PersistanceService.swift in Sources */,
 				0928D0EB2294B4C1003968C6 /* TaskEditorViewController.swift in Sources */,
 				0928D0ED2294B540003968C6 /* ViewController.swift in Sources */,
 				097E89BD2295B72500485D81 /* ProfileViewController.swift in Sources */,
 				0928D0B32294AFC0003968C6 /* DailyDo.xcdatamodeld in Sources */,
-				0928D0E72294B2DE003968C6 /* Task+CoreDataProperties.swift in Sources */,
-				0928D0E62294B2DE003968C6 /* Task+CoreDataClass.swift in Sources */,
 				097E89C32295EDA800485D81 /* AuthService.swift in Sources */,
 				097E89B92295960500485D81 /* LoginViewController.swift in Sources */,
+				09583F4322961C7C0052C277 /* Task.swift in Sources */,
 				0928D0AB2294AFC0003968C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,15 +447,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0928D0C32294AFC1003968C6 /* DailyDoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0928D0C52294AFC1003968C6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0928D0CE2294AFC1003968C6 /* DailyDoUITests.swift in Sources */,
+				09583F4A229628290052C277 /* LoginViewControllerTest.swift in Sources */,
+				09583F4D2296308A0052C277 /* SignupViewControllerTest.swift in Sources */,
+				09583F45229620620052C277 /* DataServiceTest.swift in Sources */,
+				09583F48229622BD0052C277 /* TaskEditorViewControllerTest.swift in Sources */,
+				09583F4122961BB80052C277 /* TaskTests.swift in Sources */,
+				09583F4F2296310B0052C277 /* HistoryViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,11 +463,6 @@
 			isa = PBXTargetDependency;
 			target = 0928D0A62294AFC0003968C6 /* DailyDo */;
 			targetProxy = 0928D0BF2294AFC1003968C6 /* PBXContainerItemProxy */;
-		};
-		0928D0CB2294AFC1003968C6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0928D0A62294AFC0003968C6 /* DailyDo */;
-			targetProxy = 0928D0CA2294AFC1003968C6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -687,7 +604,7 @@
 		};
 		0928D0D32294AFC1003968C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B142ACDD0F52549DE138E58 /* Pods-DailyDo.debug.xcconfig */;
+			baseConfigurationReference = 72700DC6950EDC907BCC4A75 /* Pods-DailyDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -706,7 +623,7 @@
 		};
 		0928D0D42294AFC1003968C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6788F81621A3E2D3D821EE20 /* Pods-DailyDo.release.xcconfig */;
+			baseConfigurationReference = DDA2B49D69314B47088736FF /* Pods-DailyDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -725,7 +642,7 @@
 		};
 		0928D0D62294AFC1003968C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D46A97929905CB20E855CE0 /* Pods-DailyDoTests.debug.xcconfig */;
+			baseConfigurationReference = FC43FC7B193D6EDCDC6B2BA9 /* Pods-DailyDoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -747,7 +664,7 @@
 		};
 		0928D0D72294AFC1003968C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D87C8158F1F4B0FDDE86474 /* Pods-DailyDoTests.release.xcconfig */;
+			baseConfigurationReference = D79BD434B04BE20380D4A1D5 /* Pods-DailyDoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -764,48 +681,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyDo.app/DailyDo";
-			};
-			name = Release;
-		};
-		0928D0D92294AFC1003968C6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8AC822E9D10145D1ABD07F5 /* Pods-DailyDoUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EE5BLVURRX;
-				INFOPLIST_FILE = DailyDoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eihab.DailyDoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DailyDo;
-			};
-			name = Debug;
-		};
-		0928D0DA2294AFC1003968C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E207A4C2351C50D7CEA92A0B /* Pods-DailyDoUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EE5BLVURRX;
-				INFOPLIST_FILE = DailyDoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eihab.DailyDoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DailyDo;
 			};
 			name = Release;
 		};
@@ -835,15 +710,6 @@
 			buildConfigurations = (
 				0928D0D62294AFC1003968C6 /* Debug */,
 				0928D0D72294AFC1003968C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0928D0D82294AFC1003968C6 /* Build configuration list for PBXNativeTarget "DailyDoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0928D0D92294AFC1003968C6 /* Debug */,
-				0928D0DA2294AFC1003968C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,14 +9,13 @@
 import UIKit
 import Firebase
 
+
 class ViewController: UITableViewController {
 
     // MARK: Properties
     var tasks = [Task]()
-    let appDelegate = AppDelegate.getAppDelegate()
-    let context = AppDelegate.getAppDelegate().persistentContainer.viewContext
     @IBOutlet weak var spinner: UIActivityIndicatorView!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +65,6 @@ class ViewController: UITableViewController {
             self?.spinner.stopAnimating()
             self?.tableView.reloadData()
         }
-        
-//        if let fetchedTasks = PersistanceService.shared.fetchTasks() {
-//            tasks = fetchedTasks
-//            tableView.reloadData()
-//        }
     }
     
     
@@ -84,7 +78,8 @@ class ViewController: UITableViewController {
     
     
     
-    @objc func promptForDeletion(task: Task, at indexPath: IndexPath) {
+    @objc func promptForDeletion(at indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
         let ac = UIAlertController(title: "Delete Task?", message: "Are you sure you want to delete this task", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] (_) in
             self?.delete(task: task)
@@ -113,8 +108,7 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") {[weak self] (_, indexPath) in
-            guard let task = self?.tasks[indexPath.row] else { return }
-            self?.promptForDeletion(task: task, at: indexPath)
+            self?.promptForDeletion(at: indexPath)
         }
         
         let edit = UITableViewRowAction(style: .normal, title: "Edit") {[weak self] (action, indexPath) in

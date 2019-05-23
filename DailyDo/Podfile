@@ -18,9 +18,4 @@ target 'DailyDo' do
     # Pods for testing
   end
 
-  target 'DailyDoUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
